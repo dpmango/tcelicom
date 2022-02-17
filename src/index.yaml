@@ -1,0 +1,19 @@
+ProjectTitle: Tselicom
+
+PageList:
+  - file: homepage.html
+    ready: 10
+  - file: context.html
+    ready: 10
+  - file: target.html
+    ready: 10
+  - file: mobile.html
+    ready: 10
+  - file: performance.html
+    ready: 10
+  - file: target.html
+    ready: 10
+  - file: request.html
+    ready: 10
+  - file: ui.html
+    ready: 10

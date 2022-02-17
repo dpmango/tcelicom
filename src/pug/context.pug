@@ -1,0 +1,99 @@
+---
+title: Context
+
+---
+extends shared/_layout
+block content
+
+  include ../components/hero/_context
+  include ../components/quickStart/_context.pug
+
+
+  // section
+  section.block_white
+    .container
+      .result
+        .result__title
+          h2 Что делаем для достижения результата?
+        .result__items
+          .result__item
+            .subtitle Анализ спроса
+            .p-regular
+              | Анализ уникальных преимуществ конкурентов: юзабилити сайтов, анализ объявлений в
+              | поисковой выдаче, ключевые запросы, дополнения в объявлениях
+          .result__item
+            .subtitle Планирование результата
+            .p-regular
+              | Исходя из маржинальности бизнеса строим прогноз по количеству показов, количеству
+              | кликов, CTR и стоимости рекламы на основе спроса и семантики
+
+
+  // section
+  section.block_white
+    .container
+      .conversion
+        .conversion__title
+          h2 Счётчики считают конверсии, а заявок нет?
+        .conversion__description.p-regular
+          | Перед запуском рекламы необходима полная настройка аналитики:
+          | счётчиков и всех целей, которые позволяют отследить эффективность работы рекламы для вашего направления
+          | бизнеса.
+          | Мы готовы выполнить все необходимые настройки:
+        .conversion__list
+          .conversion__list_item
+            .conversion__circle_number circle_number 1.
+            .conversion__subtitle subtitle Аналитика рекламных кампаний
+            .points_list
+              ul
+                li Более 30 параметров анализа
+                li Соц.дем анализ
+                li Анализ по времени суток и дням недели
+                li Анализ по гео
+                li Анализ по устройствам
+          .conversion__list_item
+            .conversion__circle_number circle_number 2.
+            .conversion__subtitle subtitle Офлайн-аналитика
+            .points_list
+              ul
+                li Коллтрекинг
+                li Интеграция CRM
+                li Online2Offline
+                li Сквозная аналитика
+          .conversion__list_item
+            .conversion__circle_number circle_number 3.
+            .conversion__subtitle subtitle Веб-аналитика сайта
+            .points_list
+              ul
+                li Анализ воронки
+                li Электронная торговля – аналитика товаров
+                li Многоканальные последовательности
+                li Модели атрибуции
+                li Когортный анализ
+                li Вебвизор
+
+
+  include ../components/benefits/_context
+
+  // section
+  section.block_white
+    .container
+      .getings
+        .getings__title
+          h2 Что вы получаете
+        .getings__warnings
+          .warning_block
+            span Проектная группа
+          .warning_block
+            span Проактивность
+          .warning_block
+            span Контроль сроков
+          .warning_block
+            span Ориентация на бизнес-эффективность клиента
+          .warning_block
+            span Высокие стандарты сервиса
+          .warning_block
+            span Общение на понятном языке
+
+  include ../components/plan/_plan.pug
+  include ../components/tools/_tools.pug
+  include ../components/team/_team.pug

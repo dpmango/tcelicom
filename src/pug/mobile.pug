@@ -1,0 +1,62 @@
+---
+title: Context
+
+---
+extends shared/_layout
+block content
+
+  include ../components/hero/_mobile
+  include ../components/quickStart/_mobile.pug
+
+  section.block_white
+    .container
+      .result
+        .result__title
+          h2 Что делаем для достижения результата?
+        .result__items
+          .result__item
+            .subtitle Анализ креативов в вашем сегменте
+            .p-regular
+              | Анализируем креативы конкурентов, выявляем ваши главные УТП и запускаем лучшие
+              | гипотезы
+          .result__item
+            .subtitle Планирование результата
+            .p-regular
+              | Делаем прогноз количества показов, кликов, CTR и стоимости рекламы на основе спроса
+              | и семантики
+          .result__item
+            .subtitle Эффективное продвижение
+            .p-regular
+              | В ходе ведения кампаний применяем лучшие практики Google и Facebook по их обучению
+              | и наиболее эффективные методы оптимизации
+          .result__item
+            .subtitle Аналитика рекламы
+            .p-regular
+              | Когортный анализ.
+              | Аналитика прокси ивентов.
+              | Аналитика креативов
+
+  include ../components/benefits/_context
+
+
+
+  //- section.block_white
+  //-   .container
+  //-     .getings
+  //-       .getings__title
+  //-         h2 Что вы получаете
+  //-       .getings__warnings
+  //-         .warning_block
+  //-           span Проектная группа
+  //-         .warning_block
+  //-           span Проактивность
+  //-         .warning_block
+  //-           span Контроль сроков
+  //-         .warning_block
+  //-           span Ориентация на бизнес-эффективность клиента
+  //-         .warning_block
+  //-           span Высокие стандарты сервиса
+  //-         .warning_block
+  //-           span Общение на понятном языке
+
+  include ../components/team/_team.pug
