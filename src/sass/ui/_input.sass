@@ -1,4 +1,28 @@
 // for input or textarea element
+
+.ui-input-plus
+  position: relative
+  &.has-error
+    .ui-input
+      border-color: $colorRed
+      &::placeholder, &__placeholder
+        color: $colorRed
+    &.required
+      &::after
+        color: $colorRed
+
+  &.required
+    &::after
+      // content: 'Это обязательный пункт'
+      content: ''
+      display: inline-block
+      position: absolute
+      bottom: -28px
+      font-weight: 500
+      font-size: 14px
+      line-height: 20px
+      left: 16px
+
 .ui-input
   -webkit-appearance: none
   display: block
@@ -8,20 +32,47 @@
   font-size: 16px
   color: $fontColor
   border: 1px solid $borderColor
-  border-radius: 0px
-  padding: 15px 15px
+  border-radius: 4px
+  padding: 16px 16px 12px
   transition: background
   transition: border .25s $ease, color .25s $ease, background .25s $ease
-  &::placeholder
-    color: rgba($fontColor, 5)
+  font-weight: bold
+  &__placeholder
+    position: absolute
+    top: 16px
+    left: 16px
+    pointer-events: none
+
+  &::placeholder, &__placeholder
+    color: $fontColor
+    font-weight: bold
+    font-size: 14px
+    line-height: 20px
+
+  &:focus, &:active, &.has-value
+    &::placeholder, & + .ui-input__placeholder
+      top: 0px
+      position: absolute
+      font-weight: 500
+      font-size: 10px
+      line-height: 16px
+      color: $ColorElementGray
   &:focus, &:active
-    background: white
+    border-color: $ColorElementGray
+
   &.has-error
     border-color: $colorRed
-    &::placeholder
-      color: rgba($colorRed, .5)
+
+    &::placeholder, & + .ui-input__placeholder
+      color: $colorRed
+
   &.js-datepicker
     padding-right: 50px
+
+  &[type="tel"]
+    &::placeholder
+      opacity: 0
+      display: none !important
 
 +r($md)
   .ui-input
@@ -29,7 +80,6 @@
       margin-bottom: 16px
       & + .ui-pass-eye
         bottom: 30px
-
 
 .ui-input-iconed
   position: relative
@@ -45,7 +95,13 @@
 
 textarea.ui-input
   resize: vertical
-
+  & + .ui-input__placeholder
+    margin-top: 1px
+    width: calc(100% - 2px)
+    padding-left: 16px
+    left: 1px
+    background: white
+    border-radius: 4px
 
 // eye
 .ui-pass-eye
@@ -81,8 +137,6 @@ textarea.ui-input
         opacity: 0
       .ico-mono-eye-opened
         opacity: 1
-
-
 
 // ui-dynamic-input
 .ui-dynamic-input
@@ -154,7 +208,6 @@ textarea.ui-input
         &:focus, &:active
           border-color: rgba(white, .75)
 
-
 // validation message
 .ui-input__validation
   position: absolute
@@ -176,4 +229,3 @@ input[type="date"]
   &::-webkit-calendar-picker-indicator
     display: none
     -webkit-appearance: none
-

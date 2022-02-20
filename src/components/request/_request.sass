@@ -1,0 +1,52 @@
+.request-header
+  padding: 48px 0px 64px
+  &__title
+    margin: 20px 0px 16px
+
+  &__nav
+    display: flex
+    gap: 20px
+    align-items: center
+    &-item
+      color: $ColorElementBlue
+    .ico
+      transform: rotate(90deg)
+      color: $ColorElementBlue
+      height: 13px
+      width: 9px
+
+.request
+  padding: 48px 0px 64px
+  &__row
+    display: flex
+    gap: 32px
+
+  &__col
+    width: 100%
+    display: flex
+    gap: 24px
+    flex-direction: column
+
+  &__btn
+    margin-top: 24px
+
+  &__textarea
+    height: 100%
+    textarea
+      height: 100%
+      resize: none
+
++r($sm)
+  .request
+    &__row
+      flex-direction: column
+      gap: 24px
+
+    &__btn
+      width: 100%
+
+    &__textarea
+      textarea
+        resize: vertical
+        max-height: 300px
+        min-height: 70px

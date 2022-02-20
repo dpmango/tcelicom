@@ -14,6 +14,7 @@ button
   cursor: pointer
   box-shadow: none
   transition: all $transitionSpeed $ease
+  box-shadow: 0px 5px 10px rgba(32, 45, 91, 0.45)
   &.disabled, &[disabled]
     background: #E5E5E5
     color: white
@@ -24,28 +25,29 @@ button
   &--block
     display: block
     width: 100%
-
   &-primary
     // please use paddings instead of line-height to control btn height
     font-weight: bold
-    font-size: 16px
+    font-size: 14px
     line-height: 16px
-    background: $colorPrimary
+    background: $ColorBtn
     color: white
-    padding: 17px 25px
-    border-radius: 4px
+    padding: 14px 24px
+    border-radius: 100px
+    font-weight: 600
     &:hover
-      background: $colorPrimary
+      background: $ColorBtnHover
 
   &-outline
-    font-weight: 500
+    font-weight: 600
     font-size: 14px
     line-height: (16 / 14)
     background: transparent
     color: $fontColor
-    border: 1px solid $colorPrimary
-    padding: 10px 30px
-    border-radius: 4px
+    border: 2px solid white
+    padding: 14px 24px
+    border-radius: 100px
     &:hover
-      background: $colorPrimary
-      color: white
+      border-color: $ColorBtnHover
+      background: white
+      color: $ColorBtnHover

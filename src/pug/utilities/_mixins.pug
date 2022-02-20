@@ -17,3 +17,24 @@ mixin svgColor(name, modClass)
   svg(class="ico ico-color-" + name + modClass)
     use(xlink:href= svgSpriteColor + '#ico-color-' + name)
 
+mixin inputPlus(placeholder, type='text')
+  if attributes.class == undefined
+    - var classes = ''
+  else
+    - var classes = ' ' + attributes.class
+
+  if attributes.required == undefined
+    - var required = ''
+  else
+    - var required = 'required'
+
+  div.ui-input-plus(class=required + classes)
+    input(type=type, required!=attributes.required, name!=attributes.name, id!=attributes.id).ui-input
+    span.ui-input__placeholder=placeholder
+    //- span.ui-input__validation Это обязательный пункт
+
+
+mixin textareaPlus(placeholder)
+  div.ui-input-plus(class!=attributes.class)
+    textarea.ui-input
+    span.ui-input__placeholder=placeholder

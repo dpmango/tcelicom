@@ -1,106 +1,21 @@
-// .dev
-.dev
-  .container
-    // SECTION
-    section
-      .wysiwyg
-        h3 Based on <a href="https://github.com/dpmango/gulp-starter-pack" target="_blank">gulp starter pack</a>
 
+h1
+  | [h1] Typography
+  small [h1 > small] text
 
-    // SECTION
-    section.dev__section
-      h1.h1-title JS and barba
-      .wysiwyg
-        p please use _document.on('click', 'el_selector', function ... ) for barba.js bindings
+h2
+  | [h2] Typography
+  small [h2 > small] text
 
+p.lg [p.lg] Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, voluptate?
+p.lg.lg--light [p.lg.lg--light] Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, voluptate?
+p.md [p.md] Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, voluptate?
+p.sm [p.sm] Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, voluptate?
 
-    // SECTION
-    section.dev__section
-      h1.h1-title Typography
+button.btn.btn-primary [btn-primary]
+button.btn.btn-outline [btn-outline]
 
-      .wysiwyg
-        h1.h1-title (.h1-title) Lorem Ipsum is simply dummy text
-        h2.h2-title (.h2-title) Lorem Ipsum is simply dummy text
-        h3.h3-title (.h3-title) Lorem Ipsum is simply dummy text
-        h4.h4-title (.h4-title) Lorem Ipsum is simply dummy text
-        h5.h5-title (.h5-title) Lorem Ipsum is simply dummy text
-
-        p.p-regular (.p-regular) Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-        p.p-small (.p-small) Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-
-    // SECTION
-    section.dev__section
-      h1.h1-title svg icons
-      .wysiwyg
-        p For svg icons use pug mixin +svgMono(nameOfIcon) or +svgColor(nameOfIcon). You can customize it as it would be regular font. font-size property should be set as icon height
-        p Please keep in mind exoprting svg.
-          | Sketch is good in all cases.
-          | Photoshop + illustrator - use quick export function (CC2017+) with ctrl+c ctrl+v of layers
-          | You will need viewBox property and icon should be bounded to artboard. Otherwise it will be as small as artboard differance relative to icon size
-        p Folder: /src/icons
-
-      .dev-icons
-        +svgMono('email')
-        +svgMono('calendar')
-        +svgMono('close')
-        +svgMono('arrow-fat')
-
-      .dev-icons
-        +svgColor('example')
-
-
-    // SECTION
-    section.dev__section
-      h1.h1-title Buttons
-
-      .dev-btns
-        a(href="#.btn.btn-primary Btn Primary")
-        a(href='#').btn.btn-outline Btn outline")
-
-    // SECTION
-    section.dev__section
-      h1.h1-title Typical components (moleculas)
-
-      h3.h3-title.mt-2 Tabs (js-tabs)
-
-      // tabs content
-      .dash__content.js-tabs
-        .dash__nav-scroller
-          ul.dash__nav.js-tabs-nav
-            i.dash__nav-highlighter.js-nav-highlighter
-            li.is-active
-              a(href="#tab-1 Tab 1")
-            li
-              a(href="#tab-2 Tab 2")
-
-        // NEXT TAB (TRACKING)
-        .js-tab.mt-2(data-tab="tab-1" style="display: block")
-          .h1-title Tab 1 content
-
-        // NEXT TAB (INFO)
-        .js-tab.mt-2(data-tab="tab-2")
-          .h1-title Tab 2 content
-
-
-    // SECTION (Interface)
-    section.dev__section
-      h1.h1-title Interface
-
-      .dev-interface
-
-        // Input
-        .ui-group.mt-2
-          label(for="ui_input_1 Input label")
-          input.ui-input(type="text" id="ui_input_1")
-
-        .ui-group.mt-2
-          label(for="ui_input_2 Textarea Label")
-          textarea.ui-input(placeholder="What's up?" id="ui_input_2" rows="5" data-min-rows="5")
-
-
-    // SECTION (Interface)
-    section.dev__section
-      h1.h1-title Modals (micromodal or magnific popup)
-
-      .dev-btns
-        a(href="#" data-micromodal-trigger="exampleModal.btn.btn-primary Open example modal")
+.dev-inputs
+  +inputPlus('Фамилия Имя Отчество')(required, class='has-error')
+  +inputPlus('E-mail')(required)
+  +textareaPlus('Комментарий')

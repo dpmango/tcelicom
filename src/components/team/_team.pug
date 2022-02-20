@@ -1,55 +1,562 @@
 
 section.team
-  .swiper__clouds
-    img(src="/assets/images/main/clouds.png")
+  img.team__clouds(src="/img/clouds.png" srcset='/img/clouds@2x.png' alt='Фон')
 
   .container
     .employee
-      .employee__head
-        .employee__title Проектная команда
-
-      .employee__swiper
-        .swiper
-          // Additional required wrapper
+      .employee__slide
+        .employee__left
+            h3.employee__title Проектная команда
+            .employee__pagination
+              button.swiper-nav-prev
+                +svgMono('arrowUp')
+              p.sm.bold.swiper-pagination 1/5
+              button.swiper-nav-next
+                +svgMono('arrowUp')
+            img.js-team-background.employee__image.is-active(data-slide-id='0' src="/img/team/1.png", srcset='/img/team/1@2x.png', alt="Дмитрий Субботин")
+            img.js-team-background.employee__image(data-slide-id='1' src="/img/team/2.png", srcset='/img/team/2@2x.png', alt="Виктория Гридчина")
+            img.js-team-background.employee__image(data-slide-id='2' src="/img/team/3.png", srcset='/img/team/3@2x.png', alt="Дмитрий Козловский")
+            img.js-team-background.employee__image(data-slide-id='3' src="/img/team/4.png", srcset='/img/team/4@2x.png', alt="Таланов Данила")
+            img.js-team-background.employee__image(data-slide-id='4' src="/img/team/5.png", srcset='/img/team/5@2x.png', alt="Семён Елизаров")
+            img.js-team-background.employee__image(data-slide-id='5' src="/img/team/6.png", srcset='/img/team/6@2x.png', alt="Чевычелова Ольга")
+            img.js-team-background.employee__image(data-slide-id='6' src="/img/team/7.png", srcset='/img/team/7@2x.png', alt="Берест Никита")
+            img.js-team-background.employee__image(data-slide-id='7' src="/img/team/8.png", srcset='/img/team/8@2x.png', alt="Побережная Елена")
+            img.js-team-background.employee__image(data-slide-id='8' src="/img/team/9.png", srcset='/img/team/9@2x.png', alt="Максим Лукашов")
+            img.js-team-background.employee__image(data-slide-id='9' src="/img/team/10.png", srcset='/img/team/10@2x.png', alt="Виолетта Терен")
+            img.js-team-background.employee__image(data-slide-id='10' src="/img/team/11.png", srcset='/img/team/11@2x.png', alt="Арсений Медведев")
+            img.js-team-background.employee__image(data-slide-id='11' src="/img/team/12.png", srcset='/img/team/12@2x.png', alt="Ивашков Алексей")
+            img.js-team-background.employee__image(data-slide-id='12' src="/img/team/13.png", srcset='/img/team/13@2x.png', alt="Юлия Плющай")
+            img.js-team-background.employee__image(data-slide-id='13' src="/img/team/14.png", srcset='/img/team/14@2x.png', alt="Светлана Файн")
+            img.js-team-background.employee__image(data-slide-id='14' src="/img/team/15.png", srcset='/img/team/15@2x.png', alt="Никита Морозов")
+        .swiper.js-swiper-team
           .swiper-wrapper
-            // Slides
-            .employee__swiper swiper-slide
-              .employee__left_side
-                img.employee__image(src="/assets/images/persons/Talanov.png", alt)
-              .employee__right_side
-                .employee__subtitle subtitle 8 лет в маркетинге
-                .subtitle Ключевые клиенты в индустриях:
-                .employee__cases
-                  .employee__case
-                    .employee__case_item Finance:
-                    .employee__case_item ВТБ
-                  .employee__case
-                    .employee__case_item Health:
-                    .employee__case_item Бест Клиник
-                  .employee__case
-                    .employee__case_item Education:
-                    .employee__case_item Skillbox
-                  .employee__case
-                    .employee__case_item Gaming:
-                    .employee__case_item AnvioVR,
-                    .employee__case_item PlatformaVR, District Zero, Vortex
-                  .employee__case
-                    .employee__case_item E-commerce:
-                    .employee__case_item HomeMe, Clouds, Leroy Merlin, Hasbro, Мистер Слип
-                  .employee__case
-                    .employee__case_item B2B:
-                    .employee__case_item Точка-Точка, Деловые Линии, Positive Technologies
-                  .employee__case
-                    .employee__case_item Delivery:
-                    .employee__case_item Domino&apos;s Pizza, Level kitchen, My food
-                .employee__expertise
-                  .subtitle Экспертиза:
-                  .employee__text
-                    | Контекстная реклама, Таргетированная реклама, СРА, SMM, Programmatic, SEO, Продвижение мобильных
-                    | приложений, Веб-Аналитика, Сквозная аналитика, Видеореклама, Геосервисы, Динамический ремаркетинг,
-                    | Маркетплейсы, Прайс-площадки, Инфлюенсеры, ORM.
-                div
-                  .employee__name ТАЛАНОВ ДАНИЛА
-                  .employee__position Генеральный директов
-            // Next slide
-          .swiper-pagination
+            .swiper-slide.employee__right
+              h2.employee__name.employee__name--top
+                | Дмитрий Субботин
+                small Генеральный директов
+              p.lg.lg--lighten.employee__subtitle 6 лет в интернет-маркетинге
+              h4.employee__title-info Ключевые клиенты в индустриях:
+              .employee__info
+                .employee__info-col
+                  p.sm.employee__text
+                    strong Telecom:
+                    | Tele2, Ростелеком
+                  p.sm.employee__text
+                    strong Finance:
+                    | ВТБ, Открытие, Банк Зенит, Почта Банк
+                  p.sm.employee__text
+                    strong E-commerce:
+                    | Ситилинк, Printbar, COLINS
+                .employee__info-col
+                  p.sm.employee__text
+                    strong Health:
+                    | ОнКлиник
+                  p.sm.employee__text
+                    strong Realty:
+                    | ЖК Шихово, ЖК Батарейный
+                  p.sm.employee__text
+                    strong B2B:
+                    | Кленмаркет, Точка-Точка, Positive Technologies
+                .employee__info-col
+                  p.sm.employee__text
+                    strong Auto:
+                    | Ford, Skoda, Chevrolet, Opel, Lifan, Autospot
+                  p.sm.employee__text
+                    strong Travel:
+                    | Министерство туризма Южной Кореи, Hotels.com
+              p.lg.employee__text
+                strong Экспертиза:
+                p.lg.lg--light Контекстная реклама, Таргетированная реклама, СРА, SMM Programmatic, Классические медийные закупки, Продвижение приложений, Веб-Аналитика, Сквозная аналитика, Видеореклама, Геосервисы, Динамический ремаркетинг, Маркетплейсы, Прайс-площадки, Инфлюенсеры.
+              h2.employee__name
+                | Дмитрий Субботин
+                small Генеральный директов
+            .swiper-slide.employee__right
+              h2.employee__name.employee__name--top
+                | Виктория Гридчина
+                small Генеральный директов
+              p.lg.lg--lighten.employee__subtitle 4 года в интернет маркетинге
+              h4.employee__title-info Ключевые клиенты в индустриях:
+              .employee__info
+                .employee__info-col
+                  p.sm.employee__text
+                    strong Auto:
+                    | Ford, Skoda, Chevrolet, Opel, Lifan, Autospot.ru
+                .employee__info-col
+                  p.sm.employee__text
+                    strong B2B:
+                    | Positive Technologies, Точка-Точка
+                  p.sm.employee__text
+                    strong E-commerce:
+                    | Colin’s
+                .employee__info-col
+                  p.sm.employee__text
+                    strong Education:
+                    | Амакидс
+                  p.sm.employee__text
+                    strong Finance:
+                    | Город Денег
+              p.lg.employee__text
+                strong Экспертиза:
+                p.lg.lg--light Таргетированная реклама, Веб-Аналитика, Сквозная аналитика, Работа с инфлюенсерами.
+
+              h2.employee__name
+                | Виктория Гридчина
+                small Генеральный директов
+            .swiper-slide.employee__right
+              h2.employee__name.employee__name--top
+                | Дмитрий Козловский
+                small Аналитик
+              p.lg.lg--lighten.employee__subtitle 3 года в интернет маркетинге
+              h4.employee__title-info Ключевые клиенты в индустриях:
+              .employee__info
+                .employee__info-col
+                  p.sm.employee__text
+                    strong Finance:
+                    | ВТБ
+                .employee__info-col
+                  p.sm.employee__text
+                    strong Health:
+                    | Медси
+                .employee__info-col
+                  p.sm.employee__text
+                    strong Beauty:
+                    | Лореаль
+              p.lg.employee__text
+                strong Экспертиза:
+                p.lg.lg--light Маркетинговая аналитика, Сквозная аналитика, Мобильная и веб-аналитика, Контекстная реклама, СРА, Продвижение приложений, Веб-Аналитика.
+
+              h2.employee__name
+                | Дмитрий Козловский
+                small Аналитик
+            .swiper-slide.employee__right
+              h2.employee__name.employee__name--top
+                | Таланов Данила
+                small Генеральный директов
+              p.lg.lg--lighten.employee__subtitle 4 года в интернет маркетинге
+              h4.employee__title-info Ключевые клиенты в индустриях:
+              .employee__info
+                .employee__info-col
+                  p.sm.employee__text
+                    strong Finance:
+                    | ВТБ
+                  p.sm.employee__text
+                    strong Gaming:
+                    | AnvioVR, PlatformaVR, District Zero, Vortex
+                  p.sm.employee__text
+                    strong Delivery:
+                    | Domino's Pizza, Level kitchen, My food
+                .employee__info-col
+                  p.sm.employee__text
+                    strong Health:
+                    | Бест Клиник
+                  p.sm.employee__text
+                    strong E-commerce:
+                    | HomeMe, Clouds, Leroy Merlin, Hasbro, Мистер Слип
+                  p.sm.employee__text
+                    strong Construction:
+                    | Kitchen Sacramento, Good Wood.
+                .employee__info-col
+                  p.sm.employee__text
+                    strong Education:
+                    | Skillbox
+                  p.sm.employee__text
+                    strong B2B:
+                    | Точка-Точка, Деловые Линии, Positive Technologies
+                  p.sm.employee__text
+                    strong Auto:
+                    | Autospot, Volvo, Hyndai, Kia
+              p.lg.employee__text
+                strong Экспертиза:
+                p.lg.lg--light Контекстная реклама, Таргетированная реклама, СРА, SMM, Programmatic, SEO, Продвижение мобильных приложений, Веб-Аналитика, Сквозная аналитика, Видеореклама, Геосервисы, Динамический ремаркетинг, Маркетплейсы, Прайс-площадки, Инфлюенсеры, ORM.
+
+              h2.employee__name
+                | Таланов Данила
+                small Генеральный директов
+            .swiper-slide.employee__right
+              h2.employee__name.employee__name--top
+                | Семён Елизаров
+                small Руководитель группы контекстной рекламы
+              p.lg.lg--lighten.employee__subtitle 5 лет в интернет маркетинге
+              h4.employee__title-info Ключевые клиенты в индустриях:
+
+              .employee__info
+                .employee__info-col
+                  p.sm.employee__text
+                    strong Health:
+                    | Медси, ОнКлиник, Семейный Доктор, Medical On Group
+                .employee__info-col
+                  p.sm.employee__text
+                    strong Travel:
+                    | Verba Mayr, Скандинавия
+                  p.sm.employee__text
+                    strong E-commerce:
+                    | Toy ru, Bionic
+                .employee__info-col
+                  p.sm.employee__text
+                    strong Finance:
+                    | Столото, Почта России
+
+              p.lg.employee__text
+                strong Экспертиза:
+                p.lg.lg--light Контекстная реклама, Веб-Аналитика, Сквозная аналитика, Видеореклама (YouTube и Видеореклама в Яндексе), Медийная реклама, Системы автоматизации, Маркетплейс.
+
+              h2.employee__name
+                | Семён Елизаров
+                small Руководитель группы контекстной рекламы
+            .swiper-slide.employee__right
+              h2.employee__name.employee__name--top
+                | Чевычелова Ольга
+                small Старший специалист по контекстной рекламе
+              p.lg.lg--lighten.employee__subtitle 7 лет в маркетинге
+              h4.employee__title-info Ключевые клиенты в индустриях:
+
+              .employee__info
+                .employee__info-col
+                  p.sm.employee__text
+                    strong Finance:
+                    | Альфа-Банк
+                  p.sm.employee__text
+                    strong Insurance:
+                    | Росгосстрах
+                .employee__info-col
+                  p.sm.employee__text
+                    strong Search engines:
+                    | Google Adwords, Телепорт от Google
+                  p.sm.employee__text
+                    strong CPA:
+                    | Dr.Cash
+                .employee__info-col
+                  p.sm.employee__text
+                    strong Education:
+                    | Онлайн-курс от Google и Сбер «БизнесКласс»
+                  p.sm.employee__text
+                    strong E-commerce:
+                    | MarieByMarie
+
+              p.lg.employee__text
+                strong Экспертиза:
+                p.lg.lg--light Контекстная реклама, Веб-Аналитика, Сквозная аналитика, Видеореклама (YouTube и Видеореклама в Яндексе), Медийная реклама, Системы автоматизации, Маркетплейс.
+
+              h2.employee__name
+                | Чевычелова Ольга
+                small Старший специалист по контекстной рекламе
+            .swiper-slide.employee__right
+              h2.employee__name.employee__name--top
+                | Берест Никита
+                small Специалист по мобильной рекламе
+
+              p.lg.lg--lighten.employee__subtitle 4 года в интернет маркетинге
+
+              h4.employee__title-info Ключевые клиенты в индустриях:
+
+              .employee__info
+                .employee__info-col
+                  p.sm.employee__text
+                    strong Finance:
+                    | Альфа-Банк
+                    strong Auto:
+                    | AnyTime Prime
+                .employee__info-col
+                  p.sm.employee__text
+                    strong Search engines:
+                    | Google Adwords, Телепорт от Google
+                  p.sm.employee__text
+                    strong E-commerce:
+                    | Utkonos, KupiVip
+                .employee__info-col
+                  p.sm.employee__text
+                    strong Media services:
+                    | OKKO
+
+              p.lg.employee__text
+                strong Экспертиза:
+                p.lg.lg--light Продвижение мобильных приложений, Контекстная реклама, Веб-Аналитика, Сквозная аналитика, Медийная реклама, Системы автоматизации, Маркетплейс, Знание языков программирования (C#, C++, Java, Python).
+
+              h2.employee__name
+                | Берест Никита
+                small Специалист по мобильной рекламе
+            .swiper-slide.employee__right
+              h2.employee__name.employee__name--top
+                | Побережная Елена
+                small Специалист по таргетированной рекламе
+
+              p.lg.lg--lighten.employee__subtitle 4 года в интернет маркетинге
+
+              h4.employee__title-info Ключевые клиенты в индустриях:
+
+              .employee__info
+                .employee__info-col
+                  p.sm.employee__text
+                    strong Finance:
+                    | Альфа-Банк
+                .employee__info-col
+                  p.sm.employee__text
+                    strong Media services:
+                    | ОККО
+                .employee__info-col
+                  p.sm.employee__text
+                    strong E-commerce:
+                    | Loreal, Столото
+
+              p.lg.employee__text
+                strong Экспертиза:
+                p.lg.lg--light Таргетированная реклама, Веб-Аналитика, Сквозная аналитика, Работа с инфлюенсерами.
+
+              h2.employee__name
+                | Побережная Елена
+                small Специалист по таргетированной рекламе
+            .swiper-slide.employee__right
+              h2.employee__name.employee__name--top
+                | Максим Лукашов
+                small Руководитель группы мобильной рекламы
+
+              p.lg.lg--lighten.employee__subtitle 5 лет в интернет маркетинге
+
+              h4.employee__title-info Ключевые клиенты в индустриях:
+
+              .employee__info
+                .employee__info-col
+                  p.sm.employee__text
+                    strong Carsharing:
+                    | Делимобиль
+                  p.sm.employee__text
+                    strong Recruitment:
+                    | SuperJob
+                  p.sm.employee__text
+                    strong Finance:
+                    | Freedom Finance, Binomo
+                .employee__info-col
+                  p.sm.employee__text
+                    strong Delivery:
+                    | Сбермаркет, GoLama
+                  p.sm.employee__text
+                    strong Auto:
+                    | Cartrade
+                  p.sm.employee__text
+                    strong Gaming:
+                    | Geforce Now, AnvioVR, PlatformaVR, Vortex
+                .employee__info-col
+                  p.sm.employee__text
+                    strong Travel:
+                    | Level Travel
+                  p.sm.employee__text
+                    strong Health:
+                    | Бест Клиник
+
+              p.lg.employee__text
+                strong Экспертиза:
+                p.lg.lg--light Продвижение мобильных приложений, Контекстная реклама, Веб-Аналитика, Сквозная аналитика, Видеореклама, Ремаркетинг.
+
+              h2.employee__name
+                | Максим Лукашов
+                small Руководитель группы мобильной рекламы
+            .swiper-slide.employee__right
+              h2.employee__name.employee__name--top
+                | Виолетта Терен
+                small SMM-менеджер
+
+              p.lg.lg--lighten.employee__subtitle 2 года в интернет маркетинге
+
+              h4.employee__title-info Ключевые клиенты в индустриях:
+
+              .employee__info
+                .employee__info-col
+                  p.sm.employee__text
+                    strong FMCG:
+                    | KAMIS
+                  p.sm.employee__text
+                    strong Realty:
+                    | Добро Строй, NorthernLAND
+                .employee__info-col
+                  p.sm.employee__text
+                    strong E-commerce:
+                    | KARI
+                  p.sm.employee__text
+                    strong Travel:
+                    | Министерство туризма Южной Кореи
+                .employee__info-col
+                  p.sm.employee__text
+                    strong Auto:
+                    | Audi Центр Запад, Reno Авторусь, KIA Авторусь, Haval Авторус
+
+              p.lg.employee__text
+                strong Экспертиза:
+                p.lg.lg--light Таргетированная реклама, SMM, ORM, Работа с инфлюенсерами, Дизайн, Организация мероприятий, PR.
+
+              h2.employee__name
+                | Виолетта Терен
+                small SMM-менеджер
+            .swiper-slide.employee__right
+              h2.employee__name.employee__name--top
+                | Арсений Медведев
+                small Специалист по контекстной рекламе
+
+              p.lg.lg--lighten.employee__subtitle 4 года в интернет маркетинге
+
+              h4.employee__title-info Ключевые клиенты в индустриях:
+
+              .employee__info
+                .employee__info-col
+                  p.sm.employee__text
+                    strong Telecom:
+                    | Tele2, Ростелеком
+                  p.sm.employee__text
+                    strong Delivery:
+                    | Papa Johns
+                .employee__info-col
+                  p.sm.employee__text
+                    strong Finance:
+                    | ВТБ, Открытие, Почта Банк
+                  p.sm.employee__text
+                    strong B2B:
+                    | Кленмаркет
+                .employee__info-col
+                  p.sm.employee__text
+                    strong E-commerce:
+                    | Декатлон, Ситилинк, Аквасант
+
+              p.lg.employee__text
+                strong Экспертиза:
+                p.lg.lg--light Контекстная реклама, Таргетированная реклама, СРА, Веб-Аналитика, Сквозная аналитика, Динамический ремаркетинг, Маркетплейсы, Прайс-площадки.
+
+              h2.employee__name
+                | Арсений Медведев
+                small Специалист по контекстной рекламе
+            .swiper-slide.employee__right
+              h2.employee__name.employee__name--top
+                | Ивашков Алексей
+                small Специалист по мобильной рекламе
+
+              p.lg.lg--lighten.employee__subtitle 3 года в маркетинге
+
+              h4.employee__title-info Ключевые клиенты в индустриях:
+
+              .employee__info
+                .employee__info-col
+                  p.sm.employee__text
+                    strong Travel:
+                    | Level-Travel, Связной-travel
+                  p.sm.employee__text
+                    strong Insurance:
+                    | Капитал ОМС
+                  p.sm.employee__text
+                    strong Education:
+                    | MEL Science
+                .employee__info-col
+                  p.sm.employee__text
+                    strong Carsharing:
+                    | Делимобиль, Anytime Prime
+                  p.sm.employee__text
+                    strong Auto (B2B):
+                    | Carcade
+                  p.sm.employee__text
+                    strong Finance:
+                    | ВТБ, Binomo, Freedom finance
+                .employee__info-col
+                  p.sm.employee__text
+                    strong Delivery:
+                    | Sbermarket, Dostavista
+                  p.sm.employee__text
+                    strong Recruitment:
+                    | SuperJob
+
+              p.lg.employee__text
+                strong Экспертиза:
+                p.lg.lg--light Продвижение мобильных приложений, Контекстная реклама, Веб-Аналитика, Сквозная аналитика, Видеореклама, Ремаркетинг, Бизнес-процессы, Power BI, Tableu.
+
+              h2.employee__name
+                | Ивашков Алексей
+                small Специалист по мобильной рекламе
+            .swiper-slide.employee__right
+              h2.employee__name.employee__name--top
+                | Юлия Плющай
+                small Специалист по контекстной и таргетированной рекламе
+
+              p.lg.lg--lighten.employee__subtitle 5 лет в интернет маркетинге
+
+              h4.employee__title-info Ключевые клиенты в индустриях:
+
+              .employee__info
+                .employee__info-col
+                  p.sm.employee__text
+                    strong Auto:
+                    | Autospot.ru, Krafto, Avtosmit
+                  p.sm.employee__text
+                    strong Gaming:
+                    | AnvioVR, District Zero, Platforma VR
+                .employee__info-col
+                  p.sm.employee__text
+                    strong B2B:
+                    | Точка-Точка, Positive Technologies
+                  p.sm.employee__text
+                    strong Education:
+                    | Genius Academy by GM
+                .employee__info-col
+                  p.sm.employee__text
+                    strong E-commerce:
+                    | Eldorado, Miele, Hansa, Podushka, Clouds, Lodol, Maminasumka
+                  p.sm.employee__text
+                    strong Construction:
+                    | Kitchen Sacramento
+
+              p.lg.employee__text
+                strong Экспертиза:
+                p.lg.lg--light Контекстная реклама, Таргетированная реклама, Прайс площадки, Динамический ремаркетинг, Веб-аналитика, Видеореклама.
+              h2.employee__name
+                | Юлия Плющай
+                small Специалист по контекстной и таргетированной рекламе
+            .swiper-slide.employee__right
+              h2.employee__name.employee__name--top
+                | Светлана Файн
+                small Руководитель группы таргетированной рекламы
+
+              p.lg.lg--lighten.employee__subtitle 6 лет в интернет маркетинге
+
+              h4.employee__title-info Ключевые клиенты в индустриях:
+
+              .employee__info
+                .employee__info-col
+                  p.sm.employee__text
+                    strong E-commerce:
+                    | Ozon, Loreal, Biotherm, Kiehl’s, Urban Decay, NYX Professional Makeup, Redken, La Roche-Posay, Столото
+
+              p.lg.employee__text
+                strong Экспертиза:
+                p.lg.lg--light Контекстная реклама, Таргетированная реклама, Веб-Аналитика, Сквозная аналитика, Динамический ремаркетинг, Маркетплейсы, Прайс-площадки, SMM, PR, ORM
+
+              h2.employee__name
+                | Светлана Файн
+                small Руководитель группы таргетированной рекламы
+            .swiper-slide.employee__right
+              h2.employee__name.employee__name--top
+                | Никита Морозов
+                small Стратег
+
+              p.lg.lg--lighten.employee__subtitle 7 лет в интернет маркетинге
+
+              h4.employee__title-info Ключевые клиенты в индустриях:
+
+              .employee__info
+                .employee__info-col
+                  p.sm.employee__text
+                    strong Finance:
+                    | Сбербанк
+                  p.sm.employee__text
+                    strong B2B:
+                    | Cleverbots
+                .employee__info-col
+                  p.sm.employee__text
+                    strong Education:
+                    | Skillbox, Умназия
+                .employee__info-col
+                  p.sm.employee__text
+                    strong E-commerce:
+                    | Unilever
+
+              p.lg.employee__text
+                strong Экспертиза:
+                p.lg.lg--light Бренд, Организация мероприятий, PR, Контекстная реклама, Таргетированная реклама, SMM Programmatic, Веб-Аналитика, Сквозная аналитика, Видеореклама, Маркетплейсы.
+
+              h2.employee__name
+                | Никита Морозов
+                small Стратег

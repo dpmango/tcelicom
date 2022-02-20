@@ -1,0 +1,54 @@
+
+.tools
+  padding: 48px 0 64px
+  &__title
+    margin: 0 auto 8px
+
+  &__list-items
+    display: flex
+    gap: 30px
+
+  &__list-item
+    display: flex
+    flex-direction: column
+    padding-left: 0
+    margin: 0
+    li
+      position: relative
+      padding-left: 22px
+      text-align: left
+      &::before
+        content: ''
+        position: absolute
+        left: 0
+        top: 10px
+        height: 1px
+        width: 14px
+        background-color: $ColorFont
+
+  &__items
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 30px
+    margin-top: 24px
+
+  &__item
+    text-align: center
+    display: flex
+    flex-direction: column
+
+  &__item-title
+    text-align: left
+    padding-left: 22px
+    color: $ColorElementBlue
+    margin: 16px 0px 8px
+
++r($lg)
+  .tools
+    &__items
+      grid-template-columns: 1fr 1fr
+
++r($sm)
+  .tools
+    &__items
+      grid-template-columns: 1fr

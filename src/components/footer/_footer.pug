@@ -1,13 +1,11 @@
 // FOOTER :: START
 footer.footer
   .container
-    .socials
-      label xxx
-
-      .socials__list
-        a(href='https://t.me' target='_blank')
-          //- +svgMono('')
-        a(href='https://web.whatsapp.com' target='_blank')
-          //- +svgMono('')
-
+    .footer__wrapper
+      .link-icon.footer__link-icon
+        a(href="#").link-icon__link.footer__link.ssm.uppercase Связаться с нами
+        a(href="#").link-icon__item.link-icon__item--telegram
+          +svgColor('telegram')
+        a(href="#").link-icon__item.link-icon__item--telegram
+          +svgColor('whatsapp')
 // FOOTER :: END

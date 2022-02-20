@@ -2,31 +2,51 @@
 header.header
   .container
     .header__wrapper
-      a(href="homepage.html.header__logo")
-        +svgMono('email')
-      ul.header__menu
-        li
-          a(href="homepage.html Homepage")
-        li
-          a(href="page.html Shop")
-        li
-          a(href="page.html Lorem")
-
-      .header__hamburger
-        .hamburger.js-hamburger
-          span
-          span
-          span
-
+      a(href="/").header__logo
+        +svgColor('logo-full')
+        +svgColor('logo')
+      h1.header__title
+        | Контекстная
+        small реклама
+      .link-icon.header__link-icon
+        a(href="#").link-icon.header__link.ssm.uppercase Связаться с нами
+        a(href="#").link-icon__item.link-icon__item--telegram
+          +svgColor('telegram')
+        a(href="#").link-icon__item.link-icon__item--telegram
+          +svgColor('whatsapp')
+      button.header__hamburger.hamburger.js-hamburger
+        span
+        span
+        span
+        span
 // MOBILE NAVI
 .mobile-navi
   .mobile-navi__wrapper
-    ul.mobile-navi__menu
-      li
-        a(href="homepage.html Homepage")
-      li
-        a(href="page.html Shop")
-      li
-        a(href="page.html Lorem")
+    button.hamburger.hamburger--close.js-hamburger
+      span
+      span
+    nav.mobile-navi__nav
+      a(href="/context")
+        h2
+          | Контекстная
+          small Реклама
+      a(href="/target")
+        h2
+          | Таргетированная
+          small Реклама
+      a(href="/mobile")
+        h2
+          | Мобильное
+          small продвижение
+      a(href="/performance")
+        h2
+          | Перформанс
+          small маркетинг
+      .link-icon
+        a(href="#").link-icon__item.link-icon__item--telegram
+          +svgColor('telegram')
+        a(href="#").link-icon__item.link-icon__item--telegram
+          +svgColor('whatsapp')
+      a(href='/request').btn.btn-primary Оставить заявку
     .mobile-navi__cta
       a(href="mailto:sergey@khmelevskoy.co sergey@khmelevskoy.co")

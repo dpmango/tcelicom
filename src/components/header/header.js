@@ -44,7 +44,7 @@
     },
     hamburgerClickListener: function () {
       _document.on('click', '.js-hamburger', function () {
-        $(this).toggleClass('is-active');
+        // $(this).toggleClass('is-active');
         $('.mobile-navi').toggleClass('is-active');
 
         if ($(this).is('.is-active')) {

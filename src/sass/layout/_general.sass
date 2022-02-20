@@ -48,7 +48,10 @@ body, html
   &__content
     // used for sticky footer (flexbox way)
     flex: 1 0 auto
-    padding-top: 180px
+    padding-top: 141px
+
+    +r($md)
+      padding-top: 92px
 
 .svg-sprites
   position: absolute
@@ -58,3 +61,10 @@ body, html
   width: 0.1px
   height: 0.1px
   visibility: hidden
+
+.block
+  &__blue
+    background-color: $ColorBgBlue
+    color: white
+  &__grey
+    background-color: $ColorBgLight

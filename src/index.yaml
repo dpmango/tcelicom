@@ -11,8 +11,6 @@ PageList:
     ready: 10
   - file: performance.html
     ready: 10
-  - file: target.html
-    ready: 10
   - file: request.html
     ready: 10
   - file: ui.html

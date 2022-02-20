@@ -4,5 +4,7 @@
   "vetur.validation.template": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
-  }
+	},
+	"clockify.tracking.projectId": "620e9034778e1471ffea8eb4",
+	"clockify.tracking.workspaceId": "61eee7ee7f668f6b1a890b7e"
 }

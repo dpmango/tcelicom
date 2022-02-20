@@ -1,0 +1,45 @@
+
+.quick
+  padding: 48px 0 64px
+  &__title
+    text-align: center
+    max-width: 730px
+    margin: 0 auto 8px
+
+  &__description
+    text-align: center
+
+  &__items
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 28px
+    margin-top: 24px
+
+  &__item
+    text-align: center
+    display: flex
+    align-items: center
+    flex-direction: column
+
+  &__item-title
+    margin: 16px 0px 8px
+
+  &__image
+    background-color: white
+    border-radius: 50%
+    min-width: 160px
+    min-height: 160px
+    max-width: 160px
+    max-height: 160px
+    display: flex
+    align-items: center
+    justify-content: center
+    box-shadow: 0px 4px 12px rgba(140, 145, 155, 0.2)
+    img
+      width: 100px
+      height: 100px
+
++r($md)
+  .quick
+    &__items
+      grid-template-columns: 1fr

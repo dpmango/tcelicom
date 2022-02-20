@@ -1,5 +1,5 @@
 .container
-  max-width: 1440px
+  max-width: 1220px
   width: 100%
   margin-left: auto
   margin-right: auto
@@ -10,7 +10,6 @@
   .container
     padding-left: 20px
     padding-right: 20px
-
 
 .row
   display: flex
@@ -74,7 +73,7 @@
   max-width: $col12
 
 // responsive (desktop first)
-$sizes: ("xl": $xl, "lg": $lg, "md": $md, "sm": $sm);
+$sizes: ("xl": $xl, "lg": $lg, "md": $md, "sm": $sm)
 
 @each $size, $px in $sizes
   +r(#{$px})

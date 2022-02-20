@@ -1,0 +1,22 @@
+
+section.block__blue
+  .request-header
+    .container
+      .request-header__nav
+        a.request-header__nav-item.sm(href="/") Главная
+        +svgMono('arrowUp')
+        p.sm Оставить заявку
+      h3.request-header__title Как стать нашим клиентом и прокачать свой бизнес?
+      p.request-header__description.lg.lg--light Оставьте заявку, и мы подробно расскажем о наших возможностях
+
+section
+  form.request(action="").js-validate-form
+    .container
+      .request__row
+        .request__col
+          +inputPlus("Фамилия имя отчество")(required, name='fio', id='fio')
+          +inputPlus("Телефон", 'tel')(required, name='number', id='number')
+          +inputPlus("E-mail", 'email')(name='mail', id='mail')
+        .request__col
+          +textareaPlus("Комментарий")(class='request__textarea')
+      button.request__btn.btn.btn-primary Отправить

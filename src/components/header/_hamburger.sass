@@ -1,9 +1,9 @@
-/* Hamburger
-/* https://codepen.io/ahmadbassamemran/pen/abopOMY
-$width: 28px
-$height: 24px
-$span2: 11px
+$width: 38px
+$height: 38px
+$span1: 8px
+$span2: 15px
 $span3: 22px
+$span4: 29px
 $barHeight: 2px
 $bez: cubic-bezier(0.8, 0.5, 0.2, 1.4)
 
@@ -17,24 +17,61 @@ $bez: cubic-bezier(0.8, 0.5, 0.2, 1.4)
   outline: none
   cursor: pointer
   transition: all .8s linear
+  z-index: 10
   span
-    width: 100%
     height: $barHeight
-    background-color: $colorPrimary
+    background-color: $ColorBtn
     display: block
     position: absolute
     border-radius: 2px
     transition: all .5s ease
     will-change: transform
     &:nth-child(1)
-      top: 0px
-      left: 0px
+      top: $span1
+      right: 0px
+      width: 22px
     &:nth-child(2)
       top: $span2
       right: 0px
+      width: 28px
     &:nth-child(3)
       top: $span3
-      left: 0px
+      right: 0px
+      width: 38px
+    &:nth-child(4)
+      top: $span4
+      right: 0px
+      width: 22px
+
+  &--close
+    width: $width
+    height: $height
+    position: absolute
+    top: 33px
+    right: 33px
+
+    span
+      height: $barHeight
+      background-color: white
+      display: block
+      position: absolute
+      border-radius: 2px
+      transition: all .5s ease
+      will-change: transform
+      transform-origin: center center
+
+      &:nth-child(1)
+        top: 50%
+        width: 100%
+        transform: rotate(45deg) !important
+      &:nth-child(2)
+        top: 50%
+        width: 100%
+        transform: rotate(-45deg) !important
+
+    +r($md)
+      top: 30px
+      right: 30px
 
   &.is-active
     transform: translate3d(0px,-4px,0)

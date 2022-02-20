@@ -1,28 +1,107 @@
 // titles
-h1, h2, h3, h4, h5, h6
+h1, h2, h3, h4, h5, h6, p
   margin: 0
 
-.h1-title, .h2-title, .h3-title, .h4-title, .h5-title, .h6-title
-  font-weight: 800
-
-.h1-title
+h1
   font-size: 36px
+  font-weight: 800
+  line-height: 42px
+  text-transform: uppercase
+  display: flex
+  flex-direction: column
+  small
+    font-size: 24px
+    font-weight: 300
+    line-height: 24px
+  +r($md)
+    font-size: 24px
+    line-height: 24px
+    small
+      font-size: 18px
+      line-height: 18px
 
-.h2-title
+h2
+  font-size: 36px
+  font-weight: 800
+  line-height: 42px
+  text-transform: uppercase
+  display: flex
+  flex-direction: column
+  small
+    font-size: 24px
+    font-weight: 300
+    line-height: 24px
+  +r($md)
+    font-size: 24px
+    line-height: 24px
+    small
+      font-size: 18px
+      line-height: 18px
+
+h3
   font-size: 30px
+  font-weight: 800
+  line-height: 42px
+  +r($sm)
+    font-size: 24px
+    line-height: 28px
 
-.h3-title
-  font-size: 28px
+h4
+  font-size: 18px
+  font-weight: 700
+  line-height: 24px
+  +r($sm)
+    font-size: 16px
+    line-height: 22px
+p, a, li
+  &.xl
+    font-size: 64px
+    font-weight: 800
+    line-height: 64px
+    text-transform: uppercase
+    letter-spacing: 4%
+  &.lg
+    font-size: 18px
+    font-weight: 700
+    line-height: 24px
+    &--lighten
+      font-weight: 300
+    &--light
+      font-weight: 500
+  &.md
+    font-size: 16px
+    font-weight: 500
+    line-height: 22px
+  &.sm
+    font-size: 14px
+    font-weight: 500
+    line-height: 20px
+    &.bold
+      font-weight: 700
+  &.ssm
+    font-size: 12px
+    line-height: 22px
+    font-weight: 500
+  &.uppercase
+    text-transform: uppercase
 
-.h4-title
-  font-size: 26px
+  +r($lg)
+    &.xl
+      font-size: 48px
+      line-height: 48px
 
-.h5-title
-  font-size: 24px
+  +r($md)
+    &.xl
+      font-size: 32px
+      line-height: 32px
 
-.h6-title
-  font-size: 22px
-
+  +r($sm)
+    &.xl
+      font-size: 24px
+      line-height: 24px
+    &.lg
+      font-size: 16px
+      line-height: 22px
 
 // +r($lg)
 //   .h1-title
@@ -57,7 +136,6 @@ ul
   list-style: none
   li
     display: inline-block
-
 
 // wysiwyg
 .wysiwyg
@@ -138,7 +216,6 @@ ul
 .f-900
   font-weight: 900
 
-
 // align utils
 .tac
   text-align: center
@@ -148,7 +225,6 @@ ul
 
 .tar
   text-align: right
-
 
 // tables
 .table-scroller
@@ -194,7 +270,6 @@ ul
   &--w1000
     .table
       min-width: 1000px
-
 
 // table
 .table

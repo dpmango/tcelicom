@@ -1,7 +1,7 @@
 {
   "name": "tcelicom",
   "version": "0.1.0",
-  "description": "",
+  "description": "This package intended to solve common front-end development tasks. Works best for psd/sketch to html projects and save you a lot of time setting up local environment",
   "license": "ISC",
   "author": "Sergey Khmelevskoy <sergey@khmelevskoy.co>",
   "main": "index.js",
@@ -14,7 +14,7 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp build --production",
-    "lint:js": "node_modules/.bin/eslint . --fix",
+    "lint:js": "eslint . --fix",
     "surge": "surge --project ./dist --domain tcelicom.surge.sh",
     "deploy": "gulp build --production && surge --project ./dist --domain tcelicom.surge.sh"
   },
@@ -113,5 +113,16 @@
   },
   "resolutions": {
     "natives": "1.1.6"
-  }
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dpmango/tcelicom.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dpmango/tcelicom/issues"
+  },
+  "homepage": "https://github.com/dpmango/tcelicom#readme"
 }

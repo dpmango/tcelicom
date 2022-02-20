@@ -1,0 +1,83 @@
+.plan
+  padding: 48px 0px 64px
+  &__title
+    text-align: center
+
+  &__items
+    margin-top: 32px
+    display: flex
+    flex-direction: column
+    gap: 32px
+
+  &__item
+    display: flex
+    justify-content: center
+    position: relative
+    &:last-child
+      .plan__item-number::after
+        display: none
+
+  &__item-title
+    flex: 1
+    text-align: right
+
+  &__items-list
+    display: flex
+    flex-direction: column
+    padding-left: 0
+    margin: 0
+    flex: 1
+
+    li
+      position: relative
+      padding-left: 22px
+      &::before
+        content: ''
+        position: absolute
+        left: 0
+        top: 10px
+        height: 1px
+        width: 14px
+        background-color: $ColorFont
+
+  &__item-number
+    min-width: 40px
+    min-height: 40px
+    max-width: 40px
+    max-height: 40px
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: white
+    border-radius: 50%
+    color: $ColorElementBlue
+    margin: 0px 24px
+    &::after
+      content: ''
+      position: absolute
+      width: 2px
+      top: 40px
+      height: 100%
+      background-color: white
+
++r($md)
+  .plan
+    &__item
+      display: grid
+      grid-template-columns: 1fr
+      gap: 10px
+
+    &__item-number
+      grid-column: 1/2
+      grid-row: 1/2
+      margin: 0
+      &::after
+        display: none
+
+    &__item-title
+      grid-column: 1/2
+      grid-row: 1/2
+      text-align: left
+      padding-left: 60px
+      display: flex
+      align-items: center
