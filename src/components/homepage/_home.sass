@@ -26,6 +26,7 @@
     font-size: 86px
     line-height: 86px
     font-weight: 800
+    margin-bottom: 24px
     small
       font-size: 72px
       line-height: 86px
@@ -74,3 +75,72 @@
 
 .page__home
   padding: 0
+
++r($xl)
+  .home
+    &__screen
+      padding: 0px 80px
+
+    &__title
+      font-size: 64px
+      line-height: 64px
+      small
+        font-size: 56px
+        line-height: 64px
+
+      &--small
+        font-size: 48px
+        line-height: 58px
+        small
+          font-size: 32px
+          line-height: 42px
+
++r($lg)
+  .home
+    &__screen
+      padding: 0px 60px
+
+    &__title
+      font-size: 48px
+      line-height: 48px
+      small
+        font-size: 36px
+        line-height: 48px
+      &--small
+        font-size: 36px
+        line-height: 48px
+        small
+          font-size: 24px
+          line-height: 34px
+
++r($md)
+  .home
+    &__screen
+      padding: 0
+
++r($sm)
+  .home
+    .container
+      overflow: hidden
+    &__heli
+      &--3
+        left: 100px
+    &__screen
+      text-align: center
+    &__title
+      text-align: center
+      font-size: 24px
+      line-height: 24px
+      small
+        font-size: 18px
+        line-height: 24px
+      &--small
+        font-size: 18px
+        line-height: 24px
+        small
+          font-size: 16px
+          line-height: 24px
+    &__bg
+      left: -40%
+      top: 120px
+      width: 200vw
