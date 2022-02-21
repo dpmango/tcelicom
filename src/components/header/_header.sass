@@ -9,6 +9,23 @@
   backface-visibility: hidden
   transform-style: preserve-3d
   background-color: white
+
+  &__transparent
+    background: $ColorBgLight
+    .container
+      z-index: 10
+      position: relative
+    &::after
+      content: ''
+      position: absolute
+      top: 0
+      display: block
+      height: 250px
+      width: 100vw
+      background: url(../img/cloud-home-header.png)
+      background-repeat: no-repeat
+      background-size: cover
+
   &__title
     flex: 1
     margin-left: 80px

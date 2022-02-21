@@ -1,0 +1,76 @@
+.home
+  background: url(../img/home-bg.png), linear-gradient($ColorBgLight)
+  min-height: 500vh
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center 110px
+
+  &__screen
+    min-height: 100vh
+    display: flex
+    justify-content: center
+    flex-direction: column
+    padding: 0px 140px
+    position: relative
+    opacity: 0
+    transition: $transitionSpeed $ease
+
+    &.is-active
+      opacity: 1
+
+  &__screen-wrapper
+    position: relative
+    z-index: 5
+
+  &__title
+    font-size: 86px
+    line-height: 86px
+    font-weight: 800
+    small
+      font-size: 72px
+      line-height: 86px
+      font-weight: 300
+
+    &--small
+      font-size: 58px
+      line-height: 64px
+      max-width: 955px
+      margin-bottom: 24px
+      small
+        margin-top: 26px
+        font-size: 36px
+        line-height: 48px
+        max-width: 600px
+
+  &__bg
+    position: absolute
+    top: 50px
+    left: -30%
+    right: 0
+    bottom: 0
+    z-index: 0
+    width: 100vw
+
+  &__btn
+    background-color: white
+    color: $ColorFont
+    &:hover
+      color: white
+    &--inverse
+      background-color: $ColorBtn
+      color: white
+
+  &__heli
+    position: absolute
+    &--1
+      top: 10vh
+      left: 10%
+    &--2
+      top: 120vh
+      right: 10%
+    &--3
+      top: 220vh
+      left: 5%
+
+.page__home
+  padding: 0

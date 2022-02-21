@@ -82,6 +82,7 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
     app.initComponents = function (fromPjax) {
       APP.Components.Header.init(fromPjax);
       APP.Components.Quest.init(fromPjax);
+      APP.Components.Home.init(fromPjax);
     };
 
     return app;

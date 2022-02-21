@@ -1,19 +1,23 @@
 // HEADER :: START
-header.header
+if headerTransparent
+  - var headerClass = 'header__transparent'
+header(class="header" + ' ' + headerClass)
   .container
     .header__wrapper
       a(href="/").header__logo
         +svgColor('logo-full')
         +svgColor('logo')
-      h1.header__title
-        | Контекстная
-        small реклама
-      .link-icon.header__link-icon
-        a(href="#").link-icon.header__link.ssm.uppercase Связаться с нами
-        a(href="#").link-icon__item.link-icon__item--telegram
-          +svgColor('telegram')
-        a(href="#").link-icon__item.link-icon__item--telegram
-          +svgColor('whatsapp')
+      if contentTitle || content
+        h1.header__title
+          span= contentTitle
+          small= contentSubTitle
+        .link-icon.header__link-icon
+          a(href="#").link-icon.header__link.ssm.uppercase Связаться с нами
+          a(href="#").link-icon__item.link-icon__item--telegram
+            +svgColor('telegram')
+          a(href="#").link-icon__item.link-icon__item--telegram
+            +svgColor('whatsapp')
+
       button.header__hamburger.hamburger.js-hamburger
         span
         span

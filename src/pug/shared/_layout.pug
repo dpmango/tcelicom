@@ -1,4 +1,6 @@
 include ../utilities/_mixins
+if headerTransparent
+  - var pageClass = 'page__home'
 doctype html
 html(lang="ru")
   head
@@ -12,7 +14,7 @@ html(lang="ru")
 
       // what should be changed with every pjax
       .page
-        .page__content
+        div(class='page__content' + ' ' + pageClass)
           block content
 
         block footer
