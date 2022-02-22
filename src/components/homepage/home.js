@@ -72,7 +72,8 @@
     },
     handleScroll: function () {
       const scrollY = _window.scrollTop();
-      const scrollTrigger = Math.round(scrollY + this.data.sectionHeight / 1.6);
+      const scrollYBottom = scrollY + _window.height();
+      const scrollTrigger = Math.round(scrollYBottom - this.data.sectionHeight / 1.3);
 
       if (this.data.sections && this.data.sections.length === 0) return;
 
