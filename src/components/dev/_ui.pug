@@ -1,21 +1,27 @@
 
-h1
-  | [h1] Typography
-  small [h1 > small] text
+.dev
+  .container
+    .dev__section
+      h1
+        | [h1] Typography
+        small [h1 > small] text
+    .dev__section
+      h2
+        | [h2] Typography
+        small [h2 > small] text
 
-h2
-  | [h2] Typography
-  small [h2 > small] text
+    .dev__section
+      p.lg [p.lg] Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, voluptate?
+      p.lg.lg--light [p.lg.lg--light] Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, voluptate?
+      p.md [p.md] Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, voluptate?
+      p.sm [p.sm] Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, voluptate?
 
-p.lg [p.lg] Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, voluptate?
-p.lg.lg--light [p.lg.lg--light] Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, voluptate?
-p.md [p.md] Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, voluptate?
-p.sm [p.sm] Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, voluptate?
+    .dev__section
+      button.btn.btn-primary [btn-primary]
+      button.btn.btn-outline [btn-outline]
 
-button.btn.btn-primary [btn-primary]
-button.btn.btn-outline [btn-outline]
-
-.dev-inputs
-  +inputPlus('Фамилия Имя Отчество')(required, class='has-error')
-  +inputPlus('E-mail')(required)
-  +textareaPlus('Комментарий')
+    .dev__section
+      .dev-inputs
+        +inputPlus('Фамилия Имя Отчество')(required, class='has-error')
+        +inputPlus('E-mail')(required)
+        +textareaPlus('Комментарий')
