@@ -1,56 +1,105 @@
 .home
-  background: url(../img/home-bg.png), linear-gradient($ColorBgLight)
-  min-height: 500vh
-  background-size: cover
-  background-repeat: no-repeat
-  background-position: center 110px
+  position: relative
+  z-index: 1
+  overflow: hidden
+  background: #E1E7F3
+  &__building
+    position: relative
+    z-index: 1
+    font-size: 0
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
 
-  &__screen
-    min-height: 100vh
+  &__heli
+    position: absolute
+    z-index: 2
+    font-size: 0
+    img
+      width: 100%
+    // total height 3753
+    &--1
+      // 342
+      width: 23.75vw
+      height: 23.75vw
+      top: 3.45%
+      left: 19.4vw
+    &--2
+      // 409
+      width: 28.4vw
+      height: 28.4vw
+      top: 20.9%
+      right: 68px
+    &--3
+      // 488
+      width: 33.9vw
+      height: 33.9vw
+      top: 42.8%
+      left: 0
+
+  &__section
+    position: fixed
+    z-index: 3
+    top: 0
+    left: 0
+    right: 0
+    height: 100vh
     display: flex
     justify-content: center
     flex-direction: column
-    padding: 0px 140px
-    position: relative
-    opacity: 0
-    transition: $transitionSpeed $ease
-
+    pointer-events: none
     &.is-active
-      opacity: 1
+      pointer-events: all
+      .home
+        &__section-wrapper
+          transform: none
+          opacity: 1
+          transition: transform .5s $ease, opacity .3s $ease
+        &__section-cloud
+          transform: none
+          transition: transform .8s $ease, opacity .5s $ease
+          opacity: 1
 
-  &__screen-wrapper
+  &__section-wrapper
     position: relative
+    padding-left: 90px
+    padding-right: 90px
     z-index: 5
 
   &__title
     font-size: 86px
-    line-height: 86px
+    line-height: 1
     font-weight: 800
     margin-bottom: 24px
     small
       font-size: 72px
-      line-height: 86px
+      line-height: 1.3
       font-weight: 300
 
     &--small
       font-size: 58px
-      line-height: 64px
+      line-height: 1.3
       max-width: 955px
       margin-bottom: 24px
       small
         margin-top: 26px
         font-size: 36px
-        line-height: 48px
+        line-height: 1.3
         max-width: 600px
 
-  &__bg
+  &__section-cloud
     position: absolute
     top: 50px
-    left: -30%
+    left: 0
     right: 0
     bottom: 0
     z-index: 0
-    width: 100vw
+    pointer-events: none
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
 
   &__btn
     background-color: white
@@ -61,86 +110,67 @@
       background-color: $ColorBtn
       color: white
 
-  &__heli
-    position: absolute
-    &--1
-      top: 10vh
-      left: 10%
-    &--2
-      top: 120vh
-      right: 10%
-    &--3
-      top: 220vh
-      left: 5%
+  // animation
+  &__section-wrapper
+    opacity: 0
+    transition: transform .1s $ease, opacity .15s $ease
+    transform: translate3d(0, 30px, 0)
+    will-change: transform
+  &__section-cloud
+    opacity: 0
+    transition: transform .4s $ease, opacity .3s $ease
+    transform: translate3d(0, 60px, 0)
+    will-change: transform
+
 
 .page__home
   padding: 0
 
 +r($xl)
   .home
-    &__screen
-      padding: 0px 80px
-
     &__title
       font-size: 64px
-      line-height: 64px
       small
         font-size: 56px
-        line-height: 64px
 
       &--small
         font-size: 48px
-        line-height: 58px
         small
           font-size: 32px
-          line-height: 42px
 
 +r($lg)
   .home
-    &__screen
-      padding: 0px 60px
+    &__section-wrapper
 
     &__title
       font-size: 48px
-      line-height: 48px
       small
         font-size: 36px
-        line-height: 48px
       &--small
         font-size: 36px
-        line-height: 48px
         small
           font-size: 24px
-          line-height: 34px
 
 +r($md)
   .home
-    &__screen
-      padding: 0
 
 +r($sm)
   .home
     .container
       overflow: hidden
-    &__heli
-      &--3
-        left: 100px
-    &__screen
+    // &__heli
+    //   &--3
+    //     left: 100px
+    &__section
       text-align: center
     &__title
       text-align: center
       font-size: 24px
-      line-height: 24px
       small
         font-size: 18px
-        line-height: 24px
       &--small
         font-size: 18px
-        line-height: 24px
         small
           font-size: 16px
-          line-height: 24px
-    &__bg
-      left: -40%
-      top: 120px
-      width: 200vw
+    &__section-cloud
+      right: -100%

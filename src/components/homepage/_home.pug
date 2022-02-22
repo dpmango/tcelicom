@@ -1,38 +1,66 @@
-.home
-  img.home__heli.home__heli--1(src="../img/heli-1.png", alt="")
-  img.home__heli.home__heli--2(src="../img/heli-2.png", alt="")
-  img.home__heli.home__heli--3(src="../img/heli-3.png", alt="")
-  .container
-    .home__screen.is-active
-      img(src="../img/cloud-home.png", alt="").home__bg
-      .home__screen-wrapper
+// home animated sections
+.home.js-home-animation
+  .home__building
+    img(src='img/home/homeBuilding.png' srcset='img/home/homeBuilding@2x.png 2x' alt="building background image")
+
+    .home__heli.home__heli--1
+      .js-parallax-scene(data-friction-x="0.15")
+        img(data-depth="0.15" src="img/home/heli_1.png" srcset="img/home/heli_1@2x.png 2x" alt="helicopter decor image")
+    .home__heli.home__heli--2
+      .js-parallax-scene(data-invert-x="true" data-invert-y="true")
+        img(data-depth="0.3"  src="img/home/heli_2.png" srcset="img/home/heli_2@2x.png 2x" alt="helicopter decor image")
+    .home__heli.home__heli--3(data-invert-y="true")
+      .js-parallax-scene
+        img(data-depth="0.1" src="img/home/heli_3.png" srcset="img/home/heli_3@2x.png 2x" alt="helicopter decor image")
+
+  // section
+  .home__section.js-home-section.is-active(data-id="1")
+    .home__section-cloud
+      img(src="img/home/cloud-home.png", srcset="img/home/cloud-home@2x.png 2x", alt="")
+    .container
+      .home__section-wrapper
         h2.home__title
           | Перформанс
           small маркетинг
         a.btn.btn-primary.home__btn(href='/performance') Подробнее
-    .home__screen
-      img(src="../img/cloud-home.png", alt="").home__bg
-      .home__screen-wrapper
+
+  // section
+  .home__section.js-home-section(data-id="2")
+    .home__section-cloud
+      img(src="img/home/cloud-home.png", srcset="img/home/cloud-home@2x.png 2x", alt="")
+    .container
+      .home__section-wrapper
         h2.home__title
           | мобильное
           small продвижение
         a.btn.btn-primary.home__btn(href='/mobile') Подробнее
-    .home__screen
-      img(src="../img/cloud-home.png", alt="").home__bg
-      .home__screen-wrapper
+
+  // section
+  .home__section.js-home-section(data-id="3")
+    .home__section-cloud
+      img(src="img/home/cloud-home.png", srcset="img/home/cloud-home@2x.png 2x", alt="")
+    .container
+      .home__section-wrapper
         h2.home__title
           | Таргетированная
           small реклама
         a.btn.btn-primary.home__btn(href='/target') Подробнее
-    .home__screen
-      img(src="../img/cloud-home.png", alt="").home__bg
-      .home__screen-wrapper
+
+  // section
+  .home__section.js-home-section(data-id="4")
+    .home__section-cloud
+      img(src="img/home/cloud-home.png", srcset="img/home/cloud-home@2x.png 2x", alt="")
+    .container
+      .home__section-wrapper
         h2.home__title
           | Контекстная
           small реклама
         a.btn.btn-primary.home__btn(href='/context') Подробнее
-    .home__screen
-      .home__screen-wrapper
+
+  // section
+  .home__section.js-home-section(data-id="5")
+    .container
+      .home__section-wrapper
         h2.home__title.home__title--small
           | Комплексное управление бизнесом в интернете
           small Search, Media, Video, Mobile, SMM, SEO и лидогенерация

@@ -17,6 +17,7 @@ import ScrollToPlugin from 'gsap/ScrollToPlugin';
 import debounce from 'lodash/debounce';
 import throttle from 'lodash/throttle';
 import { disablePageScroll, enablePageScroll, clearQueueScrollLocks } from 'scroll-lock';
+import Parallax from 'parallax-js';
 
 // uncomment plugins you want to use (i.e. from /js/__extras folder)
 
@@ -42,3 +43,4 @@ window.throttle = throttle;
 window.disablePageScroll = disablePageScroll;
 window.enablePageScroll = enablePageScroll;
 window.clearQueueScrollLocks = clearQueueScrollLocks;
+window.Parallax = Parallax;
