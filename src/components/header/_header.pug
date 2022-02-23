@@ -1,6 +1,14 @@
+// TOPANCHOR
+#topAncher
 // HEADER :: START
 if headerTransparent
   - var headerClass = 'header__transparent'
+else
+  .anchor-top
+    .anchor-top__container
+      a.btn.btn-primary(href="/request") Оставить заявку
+      a.btn.btn-primary.anchor-top__up(href="#topAncher")
+        +svgMono('arrowUp')
 header(class="header" + ' ' + headerClass)
   .container
     .header__wrapper

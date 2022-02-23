@@ -1,4 +1,8 @@
 // Header
+
+*
+  scroll-behavior: smooth
+
 .header
   position: fixed
   top: 0
@@ -11,7 +15,7 @@
   background-color: white
 
   &__transparent
-    background: linear-gradient(180deg, #E1E7F3 13.54%, rgba(225, 231, 243, 0.88) 69.27%, rgba(225, 231, 243, 0) 100%);
+    background: linear-gradient(180deg, #E1E7F3 13.54%, rgba(225, 231, 243, 0.88) 69.27%, rgba(225, 231, 243, 0) 100%)
     .container
       z-index: 2
       position: relative
@@ -112,6 +116,29 @@
 
     &:hover, &:focus
       border-color: $ColorBtnHover
+
+.anchor-top
+  z-index: 8
+  position: relative
+  &__container
+    display: flex
+    position: fixed
+    bottom: 20px
+    right: 20px
+    gap: 20px
+
+  &__up
+    background-color: white
+    color: $ColorBtn
+    width: 40px
+    height: 40px
+    padding: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    &:hover
+      background-color: $ColorBtn
+      color: white
 
 +r($xl)
   .header

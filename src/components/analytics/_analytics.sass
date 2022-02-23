@@ -1,0 +1,36 @@
+.analytics
+  padding: 48px 0px 64px
+
+  &__title
+    margin-bottom: 8px
+
+  &__description
+    margin-top: 0
+
+  &__items
+    margin-top: 24px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    gap: 20px
+
+  &__item
+    display: flex
+    align-items: center
+
+  &__img
+    width: 100%
++r($lg)
+  .analytics
+    &__items
+      display: grid
+      grid-template-columns: 1fr 1fr
+
++r($sm)
+  .analytics
+    &__items
+      justify-content: center
+      grid-template-columns: 1fr
+    &__img
+      width: 75%
+      margin: 0 auto
