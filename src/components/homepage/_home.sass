@@ -152,7 +152,13 @@
 
 +r($md)
   .home
-
+    &__section-wrapper
+      padding: 0px 20px
+    &__building
+      & > img
+        width: 180vw
+        object-position: center
+        margin-left: -40vw
 +r($sm)
   .home
     .container
@@ -160,6 +166,7 @@
     // &__heli
     //   &--3
     //     left: 100px
+
     &__section
       text-align: center
     &__title

@@ -7,6 +7,7 @@
       swipers: {
         hero: undefined,
         team: undefined,
+        img: undefined,
       },
     },
     init: function (fromPjax) {
@@ -38,24 +39,25 @@
         { pagination: true }
       );
       // Team
-      this.data.swipers.hero = _this.utils.buildSwiper('team', {
+      this.data.swipers.team = _this.utils.buildSwiper('team', {
         loop: true,
         slidesPerView: 1,
+        autoHeight: true,
         // spaceBetween: 200,
-        on: {
-          slideChange: function (swiper) {
-            // console.log($('.js-team-background').addClass(swiper.realIndex, 'is-acttive'));
-            $('.js-team-background[data-slide-id]').removeClass('is-active');
-            $('.js-team-background').addClass(function (index) {
-              let addedClass;
-              if (swiper.realIndex === index) {
-                addedClass = 'is-active';
-              }
-              return addedClass;
-            });
-            // .find('[data-slide-id="' + (swiper.realIndex + 1) + '"]')
-          },
-        },
+        // on: {
+        //   slideChange: function (swiper) {
+        //     // console.log($('.js-team-background').addClass(swiper.realIndex, 'is-acttive'));
+        //     $('.js-team-background[data-slide-id]').removeClass('is-active');
+        //     $('.js-team-background').addClass(function (index) {
+        //       let addedClass;
+        //       if (swiper.realIndex === index) {
+        //         addedClass = 'is-active';
+        //       }
+        //       return addedClass;
+        //     });
+        //     // .find('[data-slide-id="' + (swiper.realIndex + 1) + '"]')
+        //   },
+        // },
         pagination: {
           el: '.swiper-pagination',
           type: 'fraction',
@@ -64,7 +66,30 @@
           nextEl: '.swiper-nav-next',
           prevEl: '.swiper-nav-prev',
         },
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true
+        },
       });
+      // TeamImg
+      this.data.swipers.img = _this.utils.buildSwiper('img', {
+        loop: true,
+        slidesPerView: 1,
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'fraction',
+        },
+        navigation: {
+          nextEl: '.swiper-nav-next',
+          prevEl: '.swiper-nav-prev',
+        }
+      });
+      this.data.swipers.team.params.control = this.data.swipers.img;
+      this.data.swipers.img.params.control = this.data.swipers.team;
     },
     // utils
     utils: {

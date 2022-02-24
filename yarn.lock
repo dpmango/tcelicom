@@ -11533,10 +11533,10 @@
     "lower-case" "^1.1.1"
     "upper-case" "^1.1.1"
 
-"swiper@^6.5.1":
-  "integrity" "sha512-iuyg4cr+L7wo5EI0fWUuW+lT3BnNtVTYtInhUC5JImTr0i8jNranx8BPyN8AOSKa6jBYN+oaCzj8DAwGK+ngRg=="
-  "resolved" "https://registry.npmjs.org/swiper/-/swiper-6.5.1.tgz"
-  "version" "6.5.1"
+"swiper@^6.8.4":
+  "integrity" "sha512-O+buF9Q+sMA0H7luMS8R59hCaJKlpo8PXhQ6ZYu6Rn2v9OsFd4d1jmrv14QvxtQpKAvL/ZiovEeANI/uDGet7g=="
+  "resolved" "https://registry.npmjs.org/swiper/-/swiper-6.8.4.tgz"
+  "version" "6.8.4"
   dependencies:
     "dom7" "^3.0.0"
     "ssr-window" "^3.0.0"
