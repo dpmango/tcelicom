@@ -19,7 +19,7 @@
   &__title
     color: $ColorElementGray
 
-  &__slide
+  &__wrapper
     display: grid
     grid-template-columns: 1fr 1fr
     gap: 30px
@@ -99,9 +99,9 @@
 
 +r($lg)
   .employee
-    &__slide
-      grid-template-columns: 1fr
-      align-items: center
+    &__wrapper
+      display: flex
+      flex-direction: column
 
     &__left
       width: 100%

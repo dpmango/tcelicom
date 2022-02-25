@@ -42,8 +42,8 @@
       this.data.swipers.team = _this.utils.buildSwiper('team', {
         loop: true,
         slidesPerView: 1,
-        autoHeight: true,
-        spaceBetween: 200,
+        // autoHeight: true,
+        // spaceBetween: 200,
         on: {
           slideChange: function (swiper) {
             // console.log($('.js-team-background').addClass(swiper.realIndex, 'is-acttive'));
@@ -65,11 +65,7 @@
         navigation: {
           nextEl: '.swiper-nav-next',
           prevEl: '.swiper-nav-prev',
-        },
-        effect: 'fade',
-        fadeEffect: {
-          crossFade: true
-        },
+        }
       });
     },
     // utils
