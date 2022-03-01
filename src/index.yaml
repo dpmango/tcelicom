@@ -2,16 +2,16 @@ ProjectTitle: Tselicom
 
 PageList:
   - file: homepage.html
-    ready: 10
+    ready: 90
   - file: context.html
-    ready: 10
+    ready: 90
   - file: target.html
-    ready: 10
+    ready: 90
   - file: mobile.html
-    ready: 10
+    ready: 90
   - file: performance.html
-    ready: 10
+    ready: 90
   - file: request.html
-    ready: 10
+    ready: 90
   - file: ui.html
-    ready: 10
+    ready: 90

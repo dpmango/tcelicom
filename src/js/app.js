@@ -8,9 +8,9 @@ APP.Plugins = APP.Plugins || {};
 APP.Components = APP.Components || {};
 
 // force scroll to top on initial load
-window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
-};
+// window.onbeforeunload = function () {
+//   window.scrollTo(0, 0);
+// };
 
 // shorthand operators
 var _window = $(window);
@@ -81,6 +81,7 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
     // All components from `src/componenets`
     app.initComponents = function (fromPjax) {
       APP.Components.Header.init(fromPjax);
+      APP.Components.FixedCta.init(fromPjax);
       APP.Components.Quest.init(fromPjax);
       APP.Components.Home.init(fromPjax);
     };

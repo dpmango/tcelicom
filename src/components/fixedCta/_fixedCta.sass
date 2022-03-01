@@ -1,0 +1,36 @@
+.fixedCta
+  position: fixed
+  bottom: 20px
+  right: 20px
+  display: flex
+  gap: 20px
+  z-index: 8
+  transition: transform .25s $ease, opacity .25s $ease
+  opacity: 0
+  transform: translate3d(40px,-20px,0)
+  pointer-events: none
+  &.is-visible
+    opacity: 1
+    pointer-events: all
+    transform: translate3d(40px,0,0)
+
+  &.is-top-visible
+    transform: translate3d(0px,0px,0)
+    .fixedCta__top
+      opacity: 1
+
+  &__top
+    background-color: white
+    color: $ColorBtn
+    width: 40px
+    height: 40px
+    padding: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    opacity: 0
+    transition: opacity .25s $ease
+    &:hover
+      background-color: $ColorBtn
+      color: white
+

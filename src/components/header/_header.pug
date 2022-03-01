@@ -1,16 +1,11 @@
-// TOPANCHOR
-#topAncher
 // HEADER :: START
 - var modifier = ''
 if headerTransparent
   - modifier = 'header__transparent'
 
 else
-  .anchor-top
-    .anchor-top__container
-      a.btn.btn-primary(href="/request") Оставить заявку
-      a.btn.btn-primary.anchor-top__up(href="#topAncher")
-        +svgMono('arrowUp')
+  include ../fixedCta/_fixedCta
+
 header(class="header" + ' ' + modifier)
   .container
     .header__wrapper
@@ -33,6 +28,7 @@ header(class="header" + ' ' + modifier)
         span
         span
         span
+
 // MOBILE NAVI
 .mobile-navi
   .mobile-navi__wrapper

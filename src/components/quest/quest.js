@@ -4,7 +4,9 @@
 (function ($, APP) {
   APP.Components.Quest = {
     init: function (fromPjax) {
-      this.questionsClickListener();
+      if (!fromPjax) {
+        this.questionsClickListener();
+      }
     },
     questionsClickListener: function () {
       _document.on('click', '.quest__item', function () {

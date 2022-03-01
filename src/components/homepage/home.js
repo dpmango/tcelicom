@@ -14,7 +14,6 @@
       this.getData();
       this.initParallax();
       if (!fromPjax) {
-        this.eventListeners();
         this.listenScroll();
         this.listenResize();
       }

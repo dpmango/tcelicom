@@ -16,7 +16,7 @@
     },
     init: function (fromPjax) {
       this.getHeaderParams();
-      this.hamburgerClickListener();
+      this.eventListeners();
 
       if (!fromPjax) {
         this.listenScroll();
@@ -38,22 +38,35 @@
       };
     },
     closeMobileMenu: function () {
-      $('.js-hamburger').removeClass('is-active');
+      $('.js-hamburger').removeClass('active');
       $('.mobile-navi').removeClass('is-active');
 
       APP.Plugins.ScrollBlock.enableScroll();
     },
-    hamburgerClickListener: function () {
-      _document.on('click', '.js-hamburger', function () {
-        // $(this).toggleClass('is-active');
-        $('.mobile-navi').toggleClass('is-active');
+    eventListeners: function () {
+      var _this = this;
 
-        if ($(this).is('.is-active')) {
-          APP.Plugins.ScrollBlock.disableScroll();
-        } else {
-          APP.Plugins.ScrollBlock.enableScroll();
-        }
-      });
+      _document
+        .on('click', function (e) {
+          var $target = $(e.target);
+
+          if (
+            $target.closest('.mobile-navi').length &&
+            $target.closest('.mobile-navi__wrapper').length === 0
+          ) {
+            _this.closeMobileMenu();
+          }
+        })
+        .on('click', '.js-hamburger', function () {
+          $('.js-hamburger').toggleClass('active');
+          $('.mobile-navi').toggleClass('is-active');
+
+          if ($('.js-hamburger').is('.active')) {
+            APP.Plugins.ScrollBlock.disableScroll();
+          } else {
+            APP.Plugins.ScrollBlock.enableScroll();
+          }
+        });
     },
     listenScroll: function () {
       _window.on('scroll', this.scrollHeader.bind(this));
