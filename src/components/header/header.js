@@ -15,9 +15,10 @@
       },
     },
     init: function (fromPjax) {
+      this.getHeaderParams();
+      this.hamburgerClickListener();
+
       if (!fromPjax) {
-        this.getHeaderParams();
-        this.hamburgerClickListener();
         this.listenScroll();
         this.listenResize();
       }
@@ -99,7 +100,7 @@
           // emulate position absolute by giving negative transform on initial scroll
           var normalized = Math.floor(normalize(scroll.y, this.data.header.bottomPoint, 0, 0, 100));
           var reverseNormalized = (100 - normalized) * -1;
-          reverseNormalized = reverseNormalized * 1.2; // a bit faster transition
+          reverseNormalized = reverseNormalized * 1; // a bit faster transition
 
           this.data.header.container.css({
             transform: 'translate3d(0,' + reverseNormalized + '%,0)',

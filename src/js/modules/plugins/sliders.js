@@ -65,7 +65,7 @@
         navigation: {
           nextEl: '.swiper-nav-next',
           prevEl: '.swiper-nav-prev',
-        }
+        },
       });
     },
     // utils
