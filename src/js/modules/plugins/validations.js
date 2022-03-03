@@ -46,12 +46,31 @@
         $(form).addClass('loading');
         var formData = $(form).serialize();
         var sucessFunction = $(form).data('success-function');
-        if (sucessFunction !== undefined) {
-          var x = eval(sucessFunction);
-          if (typeof x == 'function') {
-            x(formData);
-          }
-        }
+
+        $.ajax({
+          url: form.attr('action'),
+          method: form.attr('method'),
+          data: formData,
+          success: function (result) {
+            let d = result.split(' ');
+            let y = d.slice(-1)[0];
+
+            if (y === 'success') {
+              $('.request-wrapper--success').addClass('is-active');
+              $('.request-wrapper--default').removeClass('is-active');
+            } else {
+              $('.request-wrapper--success').removeClass('is-active');
+              $('.request-wrapper--default').addClass('is-active');
+            }
+
+            if (sucessFunction !== undefined) {
+              var x = eval(sucessFunction);
+              if (typeof x == 'function') {
+                x(formData);
+              }
+            }
+          },
+        });
       },
       masks: {
         phone: {
@@ -136,11 +155,11 @@
           },
           messages: {
             email: {
-              required: 'Please enter email',
-              email: 'Email format must be like name@site.com',
+              required: 'Это обязательный пункт',
+              email: 'Формат почты name@site.com',
             },
             phone: {
-              minlength: 'Phome form is invalid',
+              minlength: 'Неверный формат телефона',
             },
           },
         };
