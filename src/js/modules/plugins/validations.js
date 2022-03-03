@@ -43,13 +43,14 @@
         }
       },
       validateSubmitHandler: function (form) {
-        $(form).addClass('loading');
-        var formData = $(form).serialize();
-        var sucessFunction = $(form).data('success-function');
+        var $form = $(form);
+        $form.addClass('loading');
+        var formData = $form.serialize();
+        var sucessFunction = $form.data('success-function');
 
         $.ajax({
-          url: form.attr('action'),
-          method: form.attr('method'),
+          url: $form.attr('action'),
+          method: $form.attr('method'),
           data: formData,
           success: function (result) {
             let d = result.split(' ');
