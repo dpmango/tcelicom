@@ -9,7 +9,7 @@ else
 header(class="header" + ' ' + modifier)
   .container
     .header__wrapper
-      a(href="/homepage.html").header__logo
+      a(href="/index.html").header__logo
         +svgColor('logo-full')
         +svgColor('logo')
       if contentTitle || content
@@ -36,19 +36,19 @@ header(class="header" + ' ' + modifier)
       span
       span
     nav.mobile-navi__nav
-      a(href="/context")
+      a(href="/context.html")
         h2
           | Контекстная
           small Реклама
-      a(href="/target")
+      a(href="/target.html")
         h2
           | Таргетированная
           small Реклама
-      a(href="/mobile")
+      a(href="/mobile.html")
         h2
           | Мобильное
           small продвижение
-      a(href="/performance")
+      a(href="/performance.html")
         h2
           | Перформанс
           small маркетинг
@@ -58,5 +58,3 @@ header(class="header" + ' ' + modifier)
         a(href="#").link-icon__item.link-icon__item--telegram
           +svgColor('whatsapp')
       a(href='/request').btn.btn-primary Оставить заявку
-    .mobile-navi__cta
-      a(href="mailto:sergey@khmelevskoy.co sergey@khmelevskoy.co")
