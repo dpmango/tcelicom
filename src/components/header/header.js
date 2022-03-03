@@ -16,9 +16,9 @@
     },
     init: function (fromPjax) {
       this.getHeaderParams();
-      this.eventListeners();
 
       if (!fromPjax) {
+        this.eventListeners();
         this.listenScroll();
         this.listenResize();
       }
