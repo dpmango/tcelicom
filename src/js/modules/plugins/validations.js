@@ -59,16 +59,16 @@
             if (y === 'success') {
               $('.request-wrapper--success').addClass('is-active');
               $('.request-wrapper--default').removeClass('is-active');
+
+              if (sucessFunction !== undefined) {
+                var x = eval(sucessFunction);
+                if (typeof x == 'function') {
+                  x(formData);
+                }
+              }
             } else {
               $('.request-wrapper--success').removeClass('is-active');
               $('.request-wrapper--default').addClass('is-active');
-            }
-
-            if (sucessFunction !== undefined) {
-              var x = eval(sucessFunction);
-              if (typeof x == 'function') {
-                x(formData);
-              }
             }
           },
         });

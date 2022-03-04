@@ -38,6 +38,7 @@
         },
         { pagination: true }
       );
+
       // Team
       this.data.swipers.team = _this.utils.buildSwiper('team', {
         loop: true,
@@ -46,20 +47,15 @@
         // spaceBetween: 200,
         on: {
           slideChange: function (swiper) {
-            // console.log($('.js-team-background').addClass(swiper.realIndex, 'is-acttive'));
-            $('.employee__right[data-slide-id]').removeClass('is-active');
-            $('.employee__right').addClass(function (index) {
-              let addedClass;
-              if (swiper.realIndex === index) {
-                addedClass = 'is-active';
-              }
-              return addedClass;
-            });
+            var $targetSlide = $(`.js-team-slide[data-slide-id="${swiper.realIndex + 1}"]`);
+
+            $targetSlide.siblings().removeClass('is-active');
+            $targetSlide.addClass('is-active');
             // .find('[data-slide-id="' + (swiper.realIndex + 1) + '"]')
           },
         },
         pagination: {
-          el: '.swiper-pagination',
+          el: '.page:last-of-type .swiper-pagination',
           type: 'fraction',
         },
         navigation: {
@@ -109,6 +105,7 @@
         const dataBefore = $dom.data('offset-before');
         const dataAfter = $dom.data('offset-after');
         const dataSpaceBetween = $dom.data('space-between');
+        const dataInitialSlide = $dom.data('initial-slide');
 
         if (dataBefore) {
           domProps = {
@@ -124,6 +121,12 @@
         if (dataSpaceBetween) {
           domProps = {
             spaceBetween: dataSpaceBetween,
+          };
+        }
+
+        if (dataInitialSlide) {
+          domProps = {
+            initialSlide: Number(dataInitialSlide),
           };
         }
 
@@ -144,6 +147,7 @@
           ...props,
           ...eProps,
         });
+
         return swiper;
       },
     },

@@ -74,7 +74,6 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
       APP.Plugins.Validations.init();
       APP.Plugins.Tabs.init(fromPjax);
       APP.Plugins.Input.init();
-
       APP.Plugins.LegacySupport.fixImages();
     };
 

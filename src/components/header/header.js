@@ -21,9 +21,10 @@
         this.eventListeners();
         this.listenScroll();
         this.listenResize();
+      } else {
+        this.closeMobileMenu();
       }
 
-      this.closeMobileMenu();
       this.setMenuClass();
       this.controlHeaderClass();
     },
@@ -41,7 +42,7 @@
       $('.js-hamburger').removeClass('active');
       $('.mobile-navi').removeClass('is-active');
 
-      APP.Plugins.ScrollBlock.enableScroll();
+      // APP.Plugins.ScrollBlock.enableScroll();
     },
     eventListeners: function () {
       var _this = this;
@@ -61,11 +62,11 @@
           $('.js-hamburger').toggleClass('active');
           $('.mobile-navi').toggleClass('is-active');
 
-          if ($('.js-hamburger').is('.active')) {
-            APP.Plugins.ScrollBlock.disableScroll();
-          } else {
-            APP.Plugins.ScrollBlock.enableScroll();
-          }
+          // if ($('.js-hamburger').is('.active')) {
+          //   APP.Plugins.ScrollBlock.disableScroll();
+          // } else {
+          //   APP.Plugins.ScrollBlock.enableScroll();
+          // }
         });
     },
     listenScroll: function () {
